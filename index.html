@@ -1,0 +1,224 @@
+<!doctype html>
+<html>
+    <head>
+      <meta charset="utf-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+      <title>JunoCraft Network</title>
+      <meta name="description" content="A creative and anarchy Minecraft server founded in 2017 with the only objective to give you, the user, the experience you want. No less.">
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+      <link rel="icon" type="image/png"  href="server-icon.png">
+      <meta name="msapplication-TileColor" content="#4D6599">
+      <meta name="msapplication-TileImage" content="favicon/ms-icon-144x144.png">
+      <meta name="theme-color" content="#4D6599">
+      <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+      <link href="https://fonts.googleapis.com/css?family=Montserrat:300,400,500,600,700" rel="stylesheet">
+      <link rel="stylesheet" href="https://constantiam.net/css/bootstrap-theme.min.css">
+      <script src="https://use.fontawesome.com/7a9e9bc849.js"></script>
+      
+<style>
+  ::-webkit-scrollbar{display: none;}
+body,p,total,label,.submitButton,input,#inputReason,#charCount{font-family:Montserrat,sans-serif}
+i#online,p{font-size:16px}
+total{font-size:14px}
+p,total{font-weight:300;line-height:23px}
+*{transition:all .5s ease-out;-webkit-transition:all .5s ease-out}
+.page,body,html,section{width:100%;height:100%;margin:0;padding:0;transition:all 1s cubic-bezier(.5,-.005,.2,1)!important;
+	-webkit-transition:all 1s cubic-bezier(.5,-.005,.2,1)!important;color:#fff;background-image:url(../img/home-bgo.jpg);
+	background-repeat:no-repeat;background-size:cover;overflow:hidden}
+#p1,#p2,#p3,#p5,#p4{background-repeat:no-repeat;background-size:cover}
+section{width:400%}
+.page{position:absolute}
+#mccheck{line-height:6px}
+#p1{left:0;background-image:url(home-bgo.png)}#p2{left:100%;background-image:url(../img/about-bgo.jpg)}
+#p3{left:200%;background-image:url(index-bgo.png)}#p4{left:400%;background-image:url(../img/white-bgo.jpg)}
+#p5{left:300%;background-image:url(bgo3.png)}
+ul{position:fixed;z-index:1}
+#t1:target .page#p1{transform:translateX(0)}#t2:target .page#p2{transform:translateX(-90%)}
+#t3:target .page#p3{transform:translateX(-190%)}#t4:target .page#p4{transform:translateX(-390%)}
+#t5:target .page#p5{transform:translateX(-290%)}
+#t2:target ul,#t3:target ul,#t5:target ul,#t4:target ul{background-color:rgba(48,51,60,1)}
+.page#p1{-webkit-transition:all .5s ease-in-out;-o-transition:all .5s ease-in-out;transition:all .5s ease-in-out}
+#t2:target .page#p1 .icon,#t3:target .page#p1 .icon,#t4:target .page#p1 .icon,#t5:target .page#p1 .icon{-webkit-filter:blur(5px);filter:blur(5px)}
+#t2:target #dos,#t3:target #tres,#t4:target #cuatro,#t5:target #cinco{-moz-transition:all .2s linear;-o-transition:all .2s linear;-webkit-transition:all .2s linear}
+.icon{color:#fff;font-size:32px;display:block}ul .icon:hover{opacity:.6}
+#p1 .icon .title{margin-bottom:20px}
+#t2:target ul .icon,#t3:target ul .icon,#t5:target ul .icon,#t4:target ul .icon{transform:scale(1);transition-delay:.1s}
+#t2:target #dos{color:#9f7f5f}#t3:target #tres{color:#8aaa75}
+#t5:target #cinco{color:#8575aa}#t4:target #cuatro{color:#994841}
+.page .icon,ul{top:0;left:0;height:auto}ul{position:fixed;bottom:0;margin:auto;width:10%;text-align:center;background-color:rgba(48,51,60,0);padding:20% 0 0}
+.credit,.page .icon{position:absolute;bottom:0;text-align:center}ul li{margin:30px 0}
+a,a:active,a:focus,a:hover,a:link,a:visited{color:#fff;text-decoration:none}.hint,.title{display:block}
+#t2:target .page#p2 .icon,#t3:target .page#p3 .icon,#t5:target .page#p5 .icon,.page#p1 .icon,#t4:target .page#p4 .icon{transform:translateX(0)!important}
+.page{overflow-y:scroll}
+.page#p1 .icon{margin-left:10%;height:540px}
+.page#p2 .icon,.page#p3 .icon,.page#p5 .icon,.page#p4 .icon{height:530px}
+.page .icon{right:10%;width:auto;margin:auto;font-size:60px;transform:translateX(360%);line-height:1.3}
+.credit{opacity:.6;width:100%;font-size:10px;font-family:Montserrat,sans-serif}
+#p1 h4,#p2 h4{letter-spacing:1px}
+#p1 span#updated,#p1 span.updated,#p1 span.players,#p1 span.online{text-transform:none}
+#p1 h4,#p1 span,#p2 .title,#p3 .title,#p5 .title,#p4 .title{font-family:Montserrat,sans-serif}
+#p1 span{font-size:16px;font-weight:300}#p1 h4{font-size:60px;font-weight:500}
+#p1 p{margin:20px 22%}#p2 .left-text{text-align:left}
+#p2 .right-image{padding-bottom:40px}#p2 .right-image img{max-width:100%;overflow:hidden}
+#p2 .title{font-size:15px;font-weight:300;margin-bottom:60px}
+#p2 h4{font-size:48px;font-family:Montserrat,sans-serif;font-weight:600;margin-bottom:30px}
+#p3 .title,#p5 .title,#p4 .title{font-size:15px;font-weight:300;margin-bottom:60px}
+#formContainer{width:500px;height:auto;margin:auto;}
+input{border:1px solid #BBB;border-radius:2px;text-align:center;color:#fff;font-size:18px;background-color:rgba(0,0,0,0);}
+label{font-size:18px;font-weight: 400;}
+.submitButton{width:75px;height:auto;background-color:rgba(0,0,0,0);border:1px solid #BBB;border-radius:2px;padding:3px;text-align:center;margin-top:5px;font-size:18px;margin:auto;}
+#submitApplication{float:right}
+#inputReason{width:500px;height:100px;font-size:18px;background-color:rgba(0,0,0,0);border:1px solid #BBB;border-radius:2px;}
+#reasonLabel{display:block;width:500px;text-align:center;margin-top:5px}
+#token{display:none}
+#charCount{text-align:right;font-size:16px;}
+.submitButton:not(.disabled):hover{border:1px solid #999;cursor:pointer;-moz-box-shadow:inset 0 0 5px #555;-webkit-box-shadow:inset 0 0 5px #555;box-shadow:inset 0 0 5px #555}
+.submitButton:not(.disabled):active{background-color:#EEE;-moz-box-shadow:inset 0 0 5px #555;-webkit-box-shadow:inset 0 0 5px #555;box-shadow:inset 0 0 5px #555}
+.hidden{display:none}.disabled{opacity:.5}
+@media (max-width: 600px){ul{padding-top: 50%!important;}}
+@media (max-width:850px){ul{padding-top:10%}
+.page#p1 .icon{height:auto;padding:40px 0 0 4%}
+.page#p2 .icon,.page#p3 .icon,.page#p4 .icon,.page#p5 .icon{height:auto;padding:40px 0}
+#p1 h4{letter-spacing:1px;font-size:36px;font-family:Montserrat,sans-serif;text-transform:uppercase;font-weight:500}
+#p1 p{margin:20px}
+#p2 .left-text{text-align:center;margin-bottom:45px}
+#p2 .right-image{margin-bottom:40px}
+.page,body,html,section{position:absolute;width:100%;height:100%;margin:0;padding:0;transition:all 1s cubic-bezier(.5,-.005,.2,1)!important;
+	-webkit-transition:all 1s cubic-bezier(.5,-.005,.2,1)!important;color:#fff;background:rgba(48,51,60,0)}
+.credit{margin-bottom:0;padding:2px 0}.row{margin-right:1px;margin-left:1px}
+.col-md-6,.col-md-12{padding-right: 2px;padding-left: 2px;}
+#formContainer{width:500px;height:auto;margin:0px 0px 0px -50px;}
+#inputReason{width:310px;}
+#charCount {text-align: center;}
+#submitApplication {float: none;}}
+</style>
+      <script src="https://constantiam.net/js/vendor/modernizr-2.8.3-respond-1.4.2.min.js"></script>
+      <script src="https://constantiam.net/js/jquery.min.js"></script>
+      <script src="https://constantiam.net/js/moment.min.js"></script>
+      <script>function q(a,b){$.ajax({url:rq,type:"GET",dataType:"json",data:{ip:a,players:!0}}).done(function(a){console.log("success"),console.log(a),b(a)}).fail(function(){console.log("error")}).always(function(){})}function setclass(a,b){a.removeClass(allclasses),a.addClass(classes[b]),a.html("")}function settext(a,b){a.removeClass(allclasses),a.html(b)}function display(a){var b=$("#numplayers"),c=$("#version"),d=$("#online"),e=$("#updated"),f=$("#players");a.online="success"===a.status,settext(e,moment.unix(a.last_updated).calendar()),setclass(d,a.online),a.online?(settext(b,a.players.now),settext(c,a.server.name),a.players.sample?settext(f,a.players.sample.map(function(a){return a.name}).join(", ")):settext(f,"")):(setclass(b,error),setclass(c,error),setclass(f,error))}var rq="https://mcapi.us/server/status",error="unknown",classes={error:"fa-question","false":"fa-times","true":"fa-check"},allclasses="";for(i in classes)allclasses+=" "+classes[i];$(document).ready(function(){q("junocraft.xyz",display)});</script>
+    </head>
+    <body>
+    <div class="ct" id="t1">
+      <div class="ct" id="t2">
+        <div class="ct" id="t3">
+          <div class="ct" id="t4">
+          <div class="ct" id="t5">
+            <section>  
+             <ul>
+               <a href="index.html#t1"><li class="icon fa fa-home" id="uno"></li></a>
+               <a href="index.html#t2"><li class="icon fa fa-newspaper-o" id="dos"></li></a>
+               <a href="index.html#t3"><li class="icon fa fa-info-circle" id="tres"></li></a>
+               <a href="index.html#t4"><li class="icon fa fa-thumbs-up" id="cuatro"></li></a>
+               <a href="index.html#t5"><li class="icon fa fa-credit-card" id="cinco"></li></a>
+             </ul>
+              <div class="page" id="p1">
+                 <li class="icon fa fa-home"><span class="title">Welcome to the</span><h4>JunoCraft Network</h4><p>JunoCraft is a Minecraft dual server network running 1.12.2.<br />
+                  It has an infinite map size, minimal rules and moderation, no admin interference.<br>
+                  Our server features two servers, creative plots and anarchy survival. <br />
+                  Officially opened in November of 2019, but roots leading back to 2017<br /><br />
+                  Our server does not feature any resets and we operate on a no bullshit basis. We believe that giving users basic permissions such as WorldEdit and VoxelSniper should be a right and not a paid feature. <br />
+                  You can join right now using: <strong>junocraft.xyz</strong><br />
+                  You can contact the operator at Frowzy#8103<br /><br />
+                  </p>
+                  <div id="mccheck">
+                  <span class="online">Online: </span>
+                  <i id="online" class="fa fa-question"></i><br />
+                  <span class="players">Players: </span>
+                  <span id="numplayers"></span><total> / 3564</total><br />
+                  <span class="updated">Updated: </span>
+                  <span id="updated"></span>
+                  </div></li>   
+              </div>
+              <div class="page" id="p2">
+                <li class="icon fa fa-newspaper-o"><span class="title">JunoCraft Patch Notes</span>
+                <div class="container">
+                  <div class="row">
+                    <div class="col-md-6">
+                      <div class="left-text">
+                            <p><a href="https://docs.google.com/forms/d/1W2SyO0zah4UJM5WZKHytHBHbfG4G46YBqA_bWGOUMqw/" target="_blank">&#9654; Submit reports, suggestions or love letters.</a><br />
+                      <br /><br />
+                        <p><strong>31 October 2019:</strong> The server has added a few plugins as a gesture of graditude for the donators of our server.</p>
+                        <p>The plugins are as follows:</p>
+                                <p>Donator Chat</p>
+                                <p>Disguise Plugin</p>
+                                <p>Pets</p>
+                                <p>Trails</p>
+                                 <p>Pets</p>
+                                 <p>Artmap</p>
+                                 <p>Banner Editor</p>
+                                 <p>Inventory Scroller</p>
+                                 <p>Emotes</p>
+                                 <p>Furniture</p>
+                              <p><strong>We hope we can continute to roll out features for both donors and non-donors alike, but our server is facing more important matters related to the server hardware itself.</strong></p>
+                      </div>
+                    </div>
+                    <div class="col-md-6">
+                      <div class="right-image">
+                        <img src="LONM.png" alt="Right Image">
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                </li>
+              </div>  
+              <div class="page" id="p3">
+                <li class="icon fa fa-info-circle"><span class="title">Information</span>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p><strong>How we begun</strong><br /><br />
+                          We formed from the League of Nations (LoN), and it was a project that was started in 2016 as a fun experimental game in which players split into factions and fight each other using plugin guns. <br />
+                          The League quickly became popular and received pivotal additions such as a world-map, list of laws (charters), and a hierarchy. <br />
+                          In late 2017 the League of Nations unofficially disbanded and multiple attempts to bring it back to life have been made. <br />
+                          Fortunately, with the launch of JunoCraft, the League of Nations is coming back for good and hopefully is never reset again.<br />
+                           We hope to bring back all the fun memories that original League of Nations created and have an even greater time. <br /><br />
+                        <strong>Links</strong><br /><br />
+                        <a href="https://discord.gg/qrN5pzH" target="_blank">Our Discord server - We highly reccomend joining this server as most communications are relayed through here</a><br /><br />
+                        <strong>Login Messages</strong><br /><br />
+                        You can buy a login message that all players will see.<br />
+                        $2 for 1 week. No personal info or links please.  <br />
+                        Email junocraft@protonmail.com before purchasing.<br />
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <div class="page" id="p4">
+                <li class="icon fa fa-thumbs-up"><span class="title">Voting</span>
+                  <div class="container">
+                    <div class="row">
+                      <div class="col-md-12">
+                        <p>Voting has not opened yet. But once it will, we will notify all players.<br />
+                          Voting will have in game rewards for helping us reach more users outside our sphere of influence.</p>
+                      </div>
+                    </div>
+                  </div>
+                </li>
+              </div>
+              <div class="page" id="p5">
+                  <li class="icon fa fa-credit-card"><span class="title">Donate</span>
+                   <div class="container">
+                     <div class="row">
+                         <p>Every day, the team at JunoCraft work endlessly in an effort to optimize the server for your pleasure. <br />
+                           But we can only do so much with letters, every single dollar goes directly to a team effort to improve the quality of the server, it's gamemodes, performance, and features.<br />
+                         You can also purchase ranks to give you cosmetic features in the creative plots server, see the Info tab for details.<br />
+                         There is no minimum donation amount and 100% of it goes into the server payment account for current and future months, upgrades and maintenance costs.</p>
+                   </div>
+                             <p><a href="https://www.junocraft.buycraft.net">- Click here to buy a rank for Creative Plots  -</a></p>
+                             <p><a href="https://www.paypal.me/junocraft">- Donate via Paypal/Credit/Debit here  -</a></p></br>
+                   </div>
+                  </li>
+                 </div>  
+            </section>
+          </div>
+        </div>
+       </div>
+      </div>
+      </div>
+    <script src="https://constantiam.net/js/vendor/bootstrap.min.js"></script>
+    <script src="https://constantiam.net/js/plugins.js"></script>
+    <script src="https://constantiam.net/js/appscript.js"></script>
+    <script type="text/javascript" src="https://constantiam.net/js/live.js"></script>
+    </body>
+</html>
